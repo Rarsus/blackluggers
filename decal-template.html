@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28mm Base Decal Template</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Teko:wght@600;700&family=Oswald:wght@500;600&family=Saira+Stencil+One&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Old English Text', 'Crimson Text', serif;
+            background: white;
+            padding: 0;
+        }
+
+        @page {
+            size: A4;
+            margin: 5mm;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            background: transparent;
+            padding: 5mm;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8mm;
+            align-content: start;
+        }
+
+        .decal {
+            border: 1px solid #ddd;
+            padding: 4mm;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 30mm;
+            page-break-inside: avoid;
+            background: transparent;
+        }
+
+        /* Fixed sizes for 28mm base rim */
+        .size-small {
+            font-size: 7pt;
+            line-height: 1.2;
+        }
+
+        .size-medium {
+            font-size: 11pt;
+            line-height: 1.3;
+        }
+
+        .size-large {
+            font-size: 13pt;
+            line-height: 1.4;
+        }
+
+        .name {
+            font-weight: bold;
+            letter-spacing: -0.3pt;
+            color: #000;
+            text-transform: uppercase;
+        }
+
+        .name-rust {
+            font-size: 8pt;
+            line-height: 1.1;
+            color: #8a3f1e;
+            letter-spacing: -0.4pt;
+            font-family: 'Teko', 'Oswald', 'Arial Narrow', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .gothic {
+            font-style: normal;
+            font-family: 'Teko', 'Oswald', 'Arial Narrow', sans-serif;
+            font-weight: bold;
+            letter-spacing: -0.4pt;
+        }
+
+        .name-stencil {
+            font-family: 'Saira Stencil One', 'Teko', 'Oswald', sans-serif;
+            letter-spacing: -0.2pt;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .page-stencil {
+            page-break-before: always;
+        }
+
+        .gang-logo {
+            width: 3mm;
+            height: 3mm;
+            margin: 2mm 0;
+            opacity: 0.8;
+        }
+
+        .gang-logo-small {
+            width: 5mm;
+            height: 5mm;
+            margin: 2mm 0;
+            opacity: 0.8;
+        }
+
+        .gang-logo-medium {
+            width: 10mm;
+            height: 10mm;
+            margin: 2mm 0;
+            opacity: 0.8;   
+        }
+
+        .gang-logo-large {
+            width: 50px;
+            height: 50px;
+            margin: 2mm 0;
+            opacity: 0.8;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .page {
+                padding: 5mm;
+            }
+
+            .decal {
+                break-inside: avoid;
+            }
+        }
+
+        .instructions {
+            page-break-after: always;
+            padding: 10mm;
+            font-size: 12pt;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .instructions h2 {
+            margin: 10mm 0 5mm 0;
+            font-size: 14pt;
+        }
+
+        .instructions p {
+            margin: 3mm 0;
+        }
+
+        .instructions ul {
+            margin-left: 10mm;
+            margin: 3mm 0 3mm 10mm;
+        }
+
+        .instructions li {
+            margin: 2mm 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- INSTRUCTIONS PAGE -->
+    <div class="instructions">
+        <h1>28mm Base Decal Template - Instructions</h1>
+        
+        <h2>Setup for Printing</h2>
+        <ul>
+            <li><strong>Paper:</strong> Use A4 transfer/decal paper (water-slide or heat-transfer)</li>
+            <li><strong>Print Settings:</strong>
+                <ul>
+                    <li>Set margins to: 0.2" (5mm) on all sides</li>
+                    <li>Paper size: A4 (210 × 297mm)</li>
+                    <li>Scale: 100% (no scaling)</li>
+                    <li>Color: Black ink recommended</li>
+                </ul>
+            </li>
+            <li><strong>Font Size Reference:</strong>
+                <ul>
+                    <li>Small (9pt) = ~3.2mm height - for tiny bases</li>
+                    <li>Medium (11pt) = ~3.9mm height - standard for 28mm</li>
+                    <li>Large (13pt) = ~4.6mm height - for important names</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Application Instructions</h2>
+        <ul>
+            <li>Let decals dry completely (varies by type, typically 24-48 hours)</li>
+            <li>Cut out each decal with a sharp knife, leaving minimal white border</li>
+            <li>Soak in water for 30-60 seconds (water-slide)</li>
+            <li>OR apply directly and smooth with water (heat-transfer)</li>
+            <li>Position on base rim and smooth out air bubbles</li>
+            <li>Seal with matte or gloss varnish once dry</li>
+        </ul>
+
+        <h2>Tips</h2>
+        <ul>
+            <li>Print on plain paper first to test alignment</li>
+            <li>Edit the HTML to add your own names in the decal divs</li>
+            <li>Adjust class to "size-small", "size-medium", or "size-large" as needed</li>
+            <li>The grid arranges 4 columns for optimal page usage</li>
+            <li>The gang logo (3×3mm @ 300DPI) can be added above or below names</li>
+            <li>Use negative letter-spacing to keep names compact for tiny bases</li>
+        </ul>
+    </div>
+
+    <!-- DECAL PAGE -->
+    <div class="page">
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name gothic name-rust">PRETTY FACE</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name gothic name-rust">IRON STARE</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name gothic name-rust">ONE PUNCH</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name gothic name-rust">LUCKY</div>
+        </div>
+
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name gothic name-rust">CRESCENT</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name gothic name-rust">BLUE EYES</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name gothic name-rust">ANYTIME</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name gothic name-rust">BOOM BOOM</div>
+        </div>
+
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name gothic name-rust">CHAINSWORD</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name gothic name-rust">GRANNY</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name gothic name-rust">BULLET</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name gothic name-rust">JUNIOR</div>
+        </div>
+
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name gothic name-rust">ROOKIE</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name gothic name-rust">GREEN</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name gothic name-rust">RAT</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name gothic name-rust">CAGE</div>
+        </div>
+    </div>
+
+    <!-- DECAL PAGE (Stencil Font Variant) -->
+    <div class="page page-stencil">
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name name-rust name-stencil">PRETTY FACE</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name name-rust name-stencil">IRON STARE</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name name-rust name-stencil">ONE PUNCH</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name name-rust name-stencil">LUCKY</div>
+        </div>
+
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name name-rust name-stencil">CRESCENT</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name name-rust name-stencil">BLUE EYES</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name name-rust name-stencil">ANYTIME</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name name-rust name-stencil">BOOM BOOM</div>
+        </div>
+
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name name-rust name-stencil">CHAINSWORD</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name name-rust name-stencil">GRANNY</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name name-rust name-stencil">BULLET</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name name-rust name-stencil">JUNIOR</div>
+        </div>
+
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name name-rust name-stencil">ROOKIE</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name name-rust name-stencil">GREEN</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name name-rust name-stencil">RAT</div>
+        </div>
+        <div class="decal" style="flex-direction: column;">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-small">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-medium">
+            <img src="black-luggers-logo-raster-clean.png" alt="Black Luggers" class="gang-logo-large">
+            <div class="name name-rust name-stencil">CAGE</div>
+        </div>
+    </div>
+
+</body>
+</html>
